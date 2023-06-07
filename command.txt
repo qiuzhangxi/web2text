@@ -1,0 +1,7 @@
+sbt "runMain ch.ethz.dalab.web2text.ExtractPageFeatures c:\result\input.html c:\result\step_1_extracted_features"
+
+
+python src\main\python\main.py classify c:\result\step_1_extracted_features c:\result\step_2_classified_labels
+
+
+sbt "runMain ch.ethz.dalab.web2text.ApplyLabelsToPage c:\result\input.html c:\result\step_2_classified_labels c:\result\step_3_applied_labels"
